@@ -16,68 +16,68 @@
 
 ---
 
-## Tech Stack
+## What I've Built
 
-<h4>Languages</h4>
-<p>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-</p>
+### Full-Stack Platforms
 
-<h4>Frontend</h4>
-<p>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
-  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-</p>
+**Auto Transport Platform**
+Built the full digital backbone for a vehicle transport company — REST API powering operations, a customer-facing booking app, a marketing site, and internal microservices handling dispatch, quotes, and billing.
+<br/><img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" /> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
 
-<h4>Backend</h4>
-<p>
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-</p>
+**Warehouse Management System**
+End-to-end warehouse platform — API layer, real-time admin dashboard for inventory tracking, and a dedicated barcode scanning station used on the warehouse floor.
+<br/><img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" /> <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" /> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
 
-<h4>Databases & Infra</h4>
-<p>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" />
-  <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" />
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
-</p>
+**Bill Payment Platform**
+Payment processing platform with async job pipelines, a Snowflake data warehouse fed by dbt transformations, and a two-way QuickBooks sync for automated reconciliation.
+<br/><img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" /> <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=flat-square&logo=snowflake&logoColor=white" /> <img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" /> <img src="https://img.shields.io/badge/Celery-37814A?style=flat-square&logo=celery&logoColor=white" />
 
 ---
 
-## What I've Built
+### Enterprise Systems
 
-| Project                           | Stack                                                | What it does                                                                                                     |
-| --------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **Auto Transport Platform**       | Django, React, Next.js, PostgreSQL, Docker           | Full platform for a vehicle transport company — API, customer-facing app, marketing site, internal microservices |
-| **Warehouse Management System**   | Flask, Django, React, PostgreSQL                     | API, admin dashboard, and barcode scanning station for warehouse operations                                      |
-| **Enterprise HR Platform**        | ASP.NET Core, Angular, Camunda, Keycloak, SQL Server | HR and business process management system with microservices architecture                                        |
-| **ERP / Accounting System**       | ASP.NET Core, Angular, AG Grid, SQL Server           | Legacy accounting system rewritten to a modern web stack                                                         |
-| **Bill Payment Platform**         | Django, React, Snowflake, dbt, Celery                | Payment processing platform with a data warehouse and QuickBooks integration                                     |
-| **Energy Storage Cloud Platform** | Python, ASP.NET Core, .NET Aspire, Azure             | Cloud data platform for battery storage systems (microservices)                                                  |
-| **City Transport App**            | React Native, Expo, Firebase, Leaflet                | Mobile app for public transport — QR ticketing, live maps, route tracking                                        |
-| **Window/Door Spec Comparator**   | React, Vite, Tailwind, Tesseract.js                  | PDF specification comparator with OCR for the construction industry                                              |
-| **Application Tracking CMS**      | Express, Prisma, Next.js, PostgreSQL                 | Content management system for tracking job/grant applications                                                    |
-| **Inventory Management System**   | _(in progress)_                                      | End-to-end inventory management system                                                                           |
-| **Personal Website**              | Next.js, Tailwind                                    | Portfolio site                                                                                                   |
-| **Client Tab Manager**            | Vanilla JS, Chrome Extension Manifest V3             | Browser extension to group and organize tabs by client/project                                                   |
+**Enterprise HR Platform**
+Microservices-based HR system handling employee lifecycle, leave management, and business process automation with BPMN workflows orchestrated through Camunda and secured via Keycloak SSO.
+<br/><img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white" /> <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" /> <img src="https://img.shields.io/badge/Camunda-FC5D0D?style=flat-square&logo=camunda&logoColor=white" /> <img src="https://img.shields.io/badge/Keycloak-4D4D4D?style=flat-square&logo=keycloak&logoColor=white" /> <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" />
+
+**ERP / Accounting System**
+Took a legacy desktop accounting system and rebuilt it as a modern web application — complex financial grids, multi-entity support, and reporting, all running in the browser.
+<br/><img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white" /> <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" /> <img src="https://img.shields.io/badge/AG_Grid-66BCDC?style=flat-square&logoColor=white" /> <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" />
+
+**Energy Storage Cloud Platform**
+Cloud data platform ingesting telemetry from battery storage systems — microservices for data collection, processing, and visualization, orchestrated with .NET Aspire and deployed on Azure.
+<br/><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white" /> <img src="https://img.shields.io/badge/.NET_Aspire-512BD4?style=flat-square&logo=dotnet&logoColor=white" /> <img src="https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" />
+
+---
+
+### Mobile & Desktop Tools
+
+**City Transport App**
+Mobile app for a city's public transport network — riders scan QR codes to buy tickets, see live vehicle positions on a map, and get real-time route & arrival info.
+<br/><img src="https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=white" /> <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" /> <img src="https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white" />
+
+**Window/Door Spec Comparator**
+Upload two PDF spec sheets, OCR extracts the data, and the tool diffs them side-by-side — built for construction teams comparing window and door specifications across revisions.
+<br/><img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" /> <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/Tesseract.js-3DDC84?style=flat-square&logoColor=white" />
+
+**Client Tab Manager**
+Chrome extension that auto-groups browser tabs by client or project — keeps context switching clean when juggling multiple workstreams.
+<br/><img src="https://img.shields.io/badge/Vanilla_JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/Chrome_Extension_MV3-4285F4?style=flat-square&logo=googlechrome&logoColor=white" />
+
+---
+
+### Side Projects
+
+**Application Tracking CMS**
+Internal CMS for managing and tracking the status of job and grant applications — full CRUD, filtering, and status workflows with a clean dashboard UI.
+<br/><img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" /> <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" /> <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+
+**Inventory Management System** _(in progress)_
+End-to-end inventory management system — currently under active development.
+
+**Personal Website**
+Portfolio and personal site.
+<br/><img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
 
 ---
 
