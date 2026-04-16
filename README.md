@@ -1,57 +1,86 @@
-<h1 align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 600; color: #1D1D1F;">Hi 👋, I'm Rijad</h1>
-<h3 align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 400; color: #515154; margin-top: -10px;">A passionate full-stack developer from Sarajevo</h3>
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com/?lines=Hey%2C+I'm+Rijad+%F0%9F%91%8B;Full-stack+engineer+from+Sarajevo;Building+web%2C+mobile+%26+backend+systems&font=Fira+Code&center=true&width=500&height=50&color=3B82F6&vCenter=true&pause=1000&size=22" alt="Typing SVG" />
+  </a>
+</h1>
 
-<div style="display: flex; justify-content: center; align-items: center; flex-direction: row; gap: 32px; border-radius: 24px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06); padding: 24px; max-width: 800px; margin: 0 auto;">
-    <div style="border-radius: 16px; padding: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); height: 200px;">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs?username=rijadrajkic&show_icons=true&locale=en&layout=donut&theme=light" alt="rijadrajkic" style="display: block; border-radius: 12px;" />
-    </div>
-    <div style="border-radius: 16px; padding: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); height: 200px;">
-      <img src="https://github-readme-stats.vercel.app/api?username=rijadrajkic&show_icons=true&locale=en&theme=light" alt="rijadrajkic" style="display: block; border-radius: 12px;" />
-    </div>
-</div>
-<br>
+<p align="center">
+  <em>Software engineer shipping production code across transport, HR, fintech, warehousing, and energy.</em>
+</p>
 
-<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1D1D1F; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-    <p>- 🔭 I’m currently working on <a href="[coming soon]" style="color: #007AFF; text-decoration: none;">ShelfSync</a></p>
-    <p>- 🌱 I’m currently learning <strong>Flutter and Unreal Engine</strong></p>
-    <p>- 👨‍💻 All of my projects are available at <a href="[coming soon]" style="color: #007AFF; text-decoration: none;">(coming soon)</a></p>
-    <p>- 💬 Ask me about <strong>next.js, python, game development and much more</strong></p>
-    <p>- 📫 How to reach me: <a href="mailto:rijadrajkic@gmail.com" style="color: #007AFF; text-decoration: none;">rijadrajkic@gmail.com</a></p>
-</div>
-<br>
+<p align="center">
+  <a href="mailto:rijadrajkic@gmail.com"><img src="https://img.shields.io/badge/Email-rijadrajkic@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/rijad-rajkic/"><img src="https://img.shields.io/badge/LinkedIn-Rijad_Rajkic-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://github.com/RijadRajkic"><img src="https://img.shields.io/badge/GitHub-RijadRajkic-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+</p>
 
-<h3 align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 600; color: #1D1D1F;">Languages and Tools:</h3>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; max-width: 800px; margin: 0 auto; border-radius: 24px; padding: 24px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);">
-    <a href="https://angular.io" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); transform: scale(1);"/></a>
-    <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://azure.microsoft.com/en-in/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.blender.org/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://download.blender.org/branding/community/blender_community_badge_white.svg" alt="blender" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://dart.dev" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="dart" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.docker.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://dotnet.microsoft.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dot-net/dot-net-original-wordmark.svg" alt="dotnet" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.figma.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://flutter.dev" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.framer.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/framer/framer-icon.svg" alt="framer" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://git-scm.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://golang.org" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://kafka.apache.org/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="kafka" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.linux.org/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://nextjs.org/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.postgresql.org" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://postman.com" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.python.org" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://pytorch.org/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.rabbitmq.com" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitMQ" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://reactjs.org/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://reactnative.dev/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://redis.io" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg" alt="redis" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-    <a href="https://unrealengine.com/" target="_blank" rel="noreferrer" style="transition: transform 0.2s;"><img src="https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg" alt="unreal" width="40" height="40" style="border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);"/></a>
-</div>
+---
+
+## Tech Stack
+
+<h4>Languages</h4>
+<p>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+</p>
+
+<h4>Frontend</h4>
+<p>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=expo&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+</p>
+
+<h4>Backend</h4>
+<p>
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+</p>
+
+<h4>Databases & Infra</h4>
+<p>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" />
+  <img src="https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+</p>
+
+---
+
+## What I've Built
+
+| Project                           | Stack                                                | What it does                                                                                                     |
+| --------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Auto Transport Platform**       | Django, React, Next.js, PostgreSQL, Docker           | Full platform for a vehicle transport company — API, customer-facing app, marketing site, internal microservices |
+| **Warehouse Management System**   | Flask, Django, React, PostgreSQL                     | API, admin dashboard, and barcode scanning station for warehouse operations                                      |
+| **Enterprise HR Platform**        | ASP.NET Core, Angular, Camunda, Keycloak, SQL Server | HR and business process management system with microservices architecture                                        |
+| **ERP / Accounting System**       | ASP.NET Core, Angular, AG Grid, SQL Server           | Legacy accounting system rewritten to a modern web stack                                                         |
+| **Bill Payment Platform**         | Django, React, Snowflake, dbt, Celery                | Payment processing platform with a data warehouse and QuickBooks integration                                     |
+| **Energy Storage Cloud Platform** | Python, ASP.NET Core, .NET Aspire, Azure             | Cloud data platform for battery storage systems (microservices)                                                  |
+| **City Transport App**            | React Native, Expo, Firebase, Leaflet                | Mobile app for public transport — QR ticketing, live maps, route tracking                                        |
+| **Window/Door Spec Comparator**   | React, Vite, Tailwind, Tesseract.js                  | PDF specification comparator with OCR for the construction industry                                              |
+| **Application Tracking CMS**      | Express, Prisma, Next.js, PostgreSQL                 | Content management system for tracking job/grant applications                                                    |
+| **Inventory Management System**   | _(in progress)_                                      | End-to-end inventory management system                                                                           |
+| **Personal Website**              | Next.js, Tailwind                                    | Portfolio site                                                                                                   |
+| **Client Tab Manager**            | Vanilla JS, Chrome Extension Manifest V3             | Browser extension to group and organize tabs by client/project                                                   |
+
+---
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=RijadRajkic&style=for-the-badge&color=3B82F6" alt="Profile Views" />
+</p>
