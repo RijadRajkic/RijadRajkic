@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  <em>Software engineer shipping production code across transport, HR, fintech, warehousing, and energy.</em>
+  Software engineer shipping code across transport, HR, fintech, warehousing, and energy.
 </p>
 
 <p align="center">
