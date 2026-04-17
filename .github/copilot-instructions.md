@@ -225,10 +225,12 @@ Prefer custom implementations over third-party libraries. Libraries are acceptab
 ## BMO Operating Rules
 
 ### Terminal discipline
+
 - **Use one terminal.** Reuse the same terminal session for all commands. Only open additional terminals when truly necessary (e.g., a background dev server that must stay running while other commands execute).
 - **`cd` between repos** in the same terminal — don't spawn a new terminal per repo.
 
 ### Script-once rule
+
 - **If you run the same command or sequence twice, script it.** Save it as an executable file (shell, Python, Node — whatever fits) in the workspace-root `scripts/` folder: `personal-projects/scripts/`.
 - Name scripts descriptively: `scripts/check-all-repos.sh`, `scripts/swap-manifest.py`, etc.
 - Make them executable (`chmod +x`) and include a one-line comment at the top describing what the script does.
