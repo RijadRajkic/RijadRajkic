@@ -11,6 +11,7 @@ Best practices distilled from production codebases across transport, HR, fintech
 The two projects we're actively building in `personal-projects/`:
 
 ### `personal-website/` — Next.js Portfolio (Pages Router)
+
 - **Stack:** Next.js 14, React 18, TypeScript 5, Tailwind 3.4, `@svgr/webpack` for SVG-as-components.
 - **Architecture:** Pages Router (`pages/`), single-page layout. App shell in `_app.tsx`: `ScreenWrapper` → `LoaderOverlayProvider` → `Navbar` → Page → `Footer`.
 - **Styling:** Tailwind utilities + animated gradient background (CSS `@keyframes` in `style/styles.css`). Custom palette: `text #190019`, `primary #dfb6b2`, `secondary #2b124c`, `accent #522b5b`, `backgroundDark #854f6c`, `backgroundLight #fbe4d8`. Custom `hoverPop` keyframe animation.
@@ -20,6 +21,7 @@ The two projects we're actively building in `personal-projects/`:
 - **Dev:** `npm run dev` / `npm run build` / `npm run lint`.
 
 ### `client-tab-manager/` — Cross-Browser Extension (Manifest V3)
+
 - **Stack:** Vanilla JS (ES2020), no bundler, no framework. Chrome + Firefox support.
 - **Architecture:** Background service worker (`src/background.js`) owns all business logic. Popup (`src/popup.js`) is a thin UI that delegates everything via `Browser.runtime.sendMessage()`.
 - **Cross-browser:** `src/browser.js` wraps `chrome.*`/`browser.*` into unified `Browser.*` API. Feature gates via `.supported` booleans. **Never use raw `chrome.*` outside browser.js.**
@@ -158,19 +160,56 @@ The two projects we're actively building in `personal-projects/`:
 
 When Rijad says **"let's wrap it up"**, execute this sequence:
 
-1. **Document** — create or update relevant docs in `docs/` (and `README.md` if the feature changes setup, usage, or architecture). Keep docs concise and factual.
-2. **Review all changes** — run `git diff` and `git status` to see every file touched during the feature.
-3. **Stage everything** — `git add -A`.
-4. **Write a tasteful commit message** — read the actual diff, then write a message that tells the _story_ of the feature in bullet form. Don't just list files or parrot function names. Describe **what changed from a user/developer perspective** and **why**. Example:
+### Step 0 — Identify all affected repos
+
+Run `git status` in **every repo that was touched during the session** by `cd`-ing into each one individually. Build a list of repos with uncommitted changes. Process them **one at a time, sequentially** — never batch multiple repos into a single command.
+
+### For each affected repo (one by one):
+
+1. **`cd` into the repo** — always explicitly `cd /path/to/repo` before running any git commands. Never rely on relative paths across repos.
+2. **Document** — create or update relevant docs in `docs/` (and `README.md` if the feature changes setup, usage, or architecture). Keep docs concise and factual.
+3. **Review all changes** — run `git status` and `git --no-pager diff` to see every file touched.
+4. **Stage everything** — `git add -A`.
+5. **Write a tasteful commit message** — read the actual diff, then write a message that tells the _story_ of the feature in bullet form. Don't just list files or parrot function names. Describe **what changed from a user/developer perspective** and **why**. Example:
    ```
    - Implement client color picker with preset palette and custom hex input
    - Persist color choice to storage and reflect it across popup and tab groups
    - Add docs for the color system and update README with new screenshot
    ```
-5. **Commit** — `git commit` with the message above.
-6. **Confirm** — report back what was committed (short summary + file count).
+6. **Commit** — `git commit` with the message above.
+7. **Confirm this repo** — report what was committed (repo name, short summary, file count).
+8. **Move to the next repo** — only after confirming the previous one is done.
 
-Do **not** push automatically — Rijad will push when ready.
+### After all repos are committed:
+
+- **Summary** — list every repo that was committed, with commit hash and one-line summary.
+- Do **not** push automatically — Rijad will push when ready.
+
+## "Let's clean up" — Abort & Revert Workflow
+
+When Rijad says **"let's clean up"**, scrap all work done in the current session and restore every touched repo to its pre-session state. Process repos **one at a time**.
+
+### For each affected repo (one by one):
+
+1. **`cd` into the repo** — always explicitly `cd /path/to/repo`.
+2. **Unstage anything staged** — `git reset HEAD`.
+3. **Discard all tracked changes** — `git checkout -- .`.
+4. **Remove untracked files and directories** — `git clean -fd`.
+5. **Verify clean state** — run `git status` and confirm `nothing to commit, working tree clean`.
+6. **Move to the next repo.**
+
+### If work was already committed:
+
+Ask Rijad per-repo whether to:
+
+- `git reset --soft HEAD~N` — undo commits but keep changes staged for review.
+- `git reset --hard HEAD~N` — nuke everything back to pre-session state.
+
+Never force-reset commits without confirmation. Never reset multiple repos at once.
+
+### After all repos are clean:
+
+- **Report** — list which repos were reverted and how many files were restored/removed in each.
 
 ## Documentation
 
