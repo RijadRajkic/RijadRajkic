@@ -6,6 +6,31 @@ Best practices distilled from production codebases across transport, HR, fintech
 
 ---
 
+## Active Projects
+
+The two projects we're actively building in `personal-projects/`:
+
+### `personal-website/` — Next.js Portfolio (Pages Router)
+- **Stack:** Next.js 14, React 18, TypeScript 5, Tailwind 3.4, `@svgr/webpack` for SVG-as-components.
+- **Architecture:** Pages Router (`pages/`), single-page layout. App shell in `_app.tsx`: `ScreenWrapper` → `LoaderOverlayProvider` → `Navbar` → Page → `Footer`.
+- **Styling:** Tailwind utilities + animated gradient background (CSS `@keyframes` in `style/styles.css`). Custom palette: `text #190019`, `primary #dfb6b2`, `secondary #2b124c`, `accent #522b5b`, `backgroundDark #854f6c`, `backgroundLight #fbe4d8`. Custom `hoverPop` keyframe animation.
+- **State:** Single React Context (`LoaderOverlay`) — fullscreen loader triggered before route transitions (600ms intentional delay).
+- **Viewport:** Full-viewport locked layout (`100dvh × 100dvw`, `overflow: hidden`). No page scrolling by design.
+- **SVGs:** Import through `public/icons/index.ts` barrel → used as `<Component />`, not `<img>`.
+- **Dev:** `npm run dev` / `npm run build` / `npm run lint`.
+
+### `client-tab-manager/` — Cross-Browser Extension (Manifest V3)
+- **Stack:** Vanilla JS (ES2020), no bundler, no framework. Chrome + Firefox support.
+- **Architecture:** Background service worker (`src/background.js`) owns all business logic. Popup (`src/popup.js`) is a thin UI that delegates everything via `Browser.runtime.sendMessage()`.
+- **Cross-browser:** `src/browser.js` wraps `chrome.*`/`browser.*` into unified `Browser.*` API. Feature gates via `.supported` booleans. **Never use raw `chrome.*` outside browser.js.**
+- **Storage:** Single key `ctm_clients` in `storage.local`. Client objects have `id`, `name`, `color`, `tabs[]`, `visible`, `groupId` (Chromium), `cookieStoreId` (Gecko).
+- **Concurrency:** `_opLocks` Set prevents concurrent hide/show on the same client.
+- **UI:** Full re-render pattern (`render()` clears innerHTML, rebuilds). `esc()` helper for XSS-safe HTML. Inline rename via double-click → input swap.
+- **Build:** `./build.sh [chrome|firefox|edge|all]` zips per-target into `dist/`. `./dev.sh [chrome|firefox]` swaps manifests for local loading.
+- **Message protocol:** Actions: `getClients`, `createClient`, `deleteClient`, `renameClient`, `setClientColor`, `addTabs`, `removeTab`, `show`, `hide`, `focus`, `showAll`, `hideAll`, `getCurrentTabs`, `suggestTabs`, `importTabGroup`, `listTabGroups`, `getBrowserInfo`.
+
+---
+
 ## TypeScript & Language
 
 - **Strict mode always** — `"strict": true`, `"noUnusedLocals": true`, `"noUnusedParameters": true`, `"noFallthroughCasesInSwitch": true` in every `tsconfig.json`.
@@ -167,6 +192,9 @@ Prefer custom implementations over third-party libraries. Libraries are acceptab
 | Design token system                        | `bussines-by-bega/app/globals.css` + `tailwind.config.ts` |
 | Full testing pyramid                       | `bussines-by-bega/tests/`                                 |
 | Custom UI component system                 | `bussines-by-bega/components/ui/`                         |
+| Pages Router + loader overlay pattern      | `personal-website/`                                       |
+| Cross-browser extension (MV3)              | `client-tab-manager/`                                     |
+| Browser API abstraction layer              | `client-tab-manager/src/browser.js`                       |
 | Zustand store pattern                      | `elitfonster/src/stores/`                                 |
 | Domain-driven orchestrator                 | `elitfonster/src/orchestrator/`                           |
 | React Native / Expo                        | `stray_cat/CityRideBIH/`                                  |
