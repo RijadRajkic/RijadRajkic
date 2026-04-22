@@ -156,9 +156,72 @@ The two projects we're actively building in `personal-projects/`:
   No conventional-commit prefixes (`feat:`, `fix:`). Just clear bullets.
 - **No monorepo tooling** — each project is a standalone repo.
 
+## "Let's document this" — Change Documentation Trigger
+
+When Rijad says **"let's document this"**, or when a feature reaches a stable, reviewable state, produce a structured documentation entry that explains **what changed and why** — not just a file list.
+
+### When it triggers
+
+- Rijad explicitly says "let's document this."
+- A feature is complete and Rijad has reviewed it (i.e., right before "let's wrap it up").
+- **BMO never triggers this automatically.** Only Rijad decides when something is worth documenting.
+
+### What to produce
+
+Write (or append to) `docs/changelog.md` in the affected project. Each entry follows this format:
+
+```markdown
+## vX.Y.Z — Short Feature Title (YYYY-MM-DD)
+
+### What changed
+
+A 2–4 sentence narrative explaining what the user/developer would notice.
+Not "modified FolderCard.tsx" — instead "The homepage is now a full-screen
+stack of overlapping folder cards that expand on hover to preview their
+contents. No header, no footer, no scroll — the folders ARE the navigation."
+
+### Why
+
+1–3 sentences on the motivation. What problem did this solve, what feedback
+drove it, or what design goal does it serve?
+
+### Key decisions
+
+- **Decision**: Rationale. (e.g., "Split into two route groups `(site)` and
+  `(pages)`: homepage needs zero chrome, inner pages need header/footer.")
+- **Decision**: Rationale.
+
+### Architecture notes (if applicable)
+
+Brief description of any structural changes — new directories, moved files,
+new patterns introduced. Only include this section when the change affects
+how a developer would navigate or extend the codebase.
+
+### What's next
+
+1–2 bullets on immediate next steps or known follow-ups.
+```
+
+### Versioning scheme
+
+- **Major (X):** Fundamental rethink — new navigation concept, full redesign, tech stack swap.
+- **Minor (Y):** Complete feature — new page, new component system, new integration.
+- **Patch (Z):** Refinement — bug fix, polish, copy change, animation tweak.
+
+Start at `v0.1.0` for projects in active development. Bump to `v1.0.0` on first production deploy.
+
+### Rules
+
+- **Narrative over inventory.** Describe the change as if explaining it to a developer joining the project tomorrow. "We restructured routing into two groups because the homepage needs to be chrome-free" beats "created app/(pages)/layout.tsx, moved about/ blog/ projects/ contact/."
+- **Decisions are first-class.** Every non-obvious choice gets a bullet in "Key decisions." If Rijad made the call, attribute it ("Rijad chose X over Y because..."). If BMO recommended it, say so.
+- **Cumulative, not overwritten.** New entries prepend to the changelog (newest first). Never delete old entries.
+- **Version tag matches git.** When "let's wrap it up" runs after documentation, the commit message should reference the version (e.g., `v0.2.0 — Folder navigation redesign`).
+
 ## "Let's wrap it up" — Feature Completion Workflow
 
 When Rijad says **"let's wrap it up"**, execute this sequence:
+
+> **Prerequisite:** If "let's document this" hasn't been run yet for the current work, ask Rijad if he wants to document before committing. Never skip this prompt.
 
 ### Step 0 — Identify all affected repos
 
@@ -170,11 +233,14 @@ Run `git status` in **every repo that was touched during the session** by `cd`-i
 2. **Document** — create or update relevant docs in `docs/` (and `README.md` if the feature changes setup, usage, or architecture). Keep docs concise and factual.
 3. **Review all changes** — run `git status` and `git --no-pager diff` to see every file touched.
 4. **Stage everything** — `git add -A`.
-5. **Write a tasteful commit message** — read the actual diff, then write a message that tells the _story_ of the feature in bullet form. Don't just list files or parrot function names. Describe **what changed from a user/developer perspective** and **why**. Example:
+5. **Write a tasteful commit message** — read the actual diff, then write a message that tells the _story_ of the feature in bullet form. Don't just list files or parrot function names. Describe **what changed from a user/developer perspective** and **why**. If a `docs/changelog.md` version entry exists for this work, prefix the commit with the version tag. Example:
    ```
-   - Implement client color picker with preset palette and custom hex input
-   - Persist color choice to storage and reflect it across popup and tab groups
-   - Add docs for the color system and update README with new screenshot
+   v0.2.0 — Folder navigation redesign
+   
+   - Implement full-screen folder stack as homepage navigation
+   - Split route groups: (site) for bare homepage, (pages) for chrome-wrapped inner pages
+   - Add hover-expand preview showing featured content per folder
+   - Mount-based page transitions via double-rAF in (pages)/template.tsx
    ```
 6. **Commit** — `git commit` with the message above.
 7. **Confirm this repo** — report what was committed (repo name, short summary, file count).
@@ -223,6 +289,11 @@ Never force-reset commits without confirmation. Never reset multiple repos at on
 Prefer custom implementations over third-party libraries. Libraries are acceptable for infrastructure (ORM, framework, bundler) but not for UI components, animations, validation, or anything the team can write in under a day. This gives full control, avoids dependency churn, and keeps bundle sizes minimal. When evaluating a library, ask: "Can I build a fit-for-purpose version in less time than I'd spend learning and working around the library's abstractions?"
 
 ## BMO Operating Rules
+
+### Never commit or document unprompted
+
+- **No auto-commits.** BMO never runs `git add`, `git commit`, or any git write operation unless Rijad explicitly triggers "let's wrap it up" or directly asks for a commit.
+- **No auto-documentation.** BMO never writes to `docs/changelog.md` unless Rijad says "let's document this." BMO may _remind_ Rijad that documentation is pending, but never produces it without the trigger.
 
 ### Terminal discipline
 
