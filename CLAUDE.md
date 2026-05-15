@@ -8,21 +8,41 @@ This is the canonical instructions file used by both BMO (Claude) and Copilot. P
 
 ---
 
+## Best Practices — source of truth for cross-cutting rules
+
+Stack-agnostic principles and tooling opinions live in the **[📚 Best Practices](https://www.notion.so/358bf806d35d81e2bee1f2e432403148)** Notion hub, refreshed monthly by BMO's scheduled task. Pages by topic:
+
+- [General Software](https://www.notion.so/358bf806d35d81cfbf23c82003411f56) · [Python](https://www.notion.so/358bf806d35d81ae8bc8e70433dba445) · [Django](https://www.notion.so/358bf806d35d81a7ab18db3d31dca5a5) · [Flask](https://www.notion.so/358bf806d35d810aadf4efd4b9d88f75) · [TypeScript](https://www.notion.so/358bf806d35d81768b84dbf6b207fa28) · [React](https://www.notion.so/358bf806d35d81ce87b9d1533bcc426e) · [Next.js](https://www.notion.so/358bf806d35d8196b2d6cd74d2f63a01) · [Golang](https://www.notion.so/358bf806d35d8197ade1fd457a32b418) · [Tooling](https://www.notion.so/358bf806d35d81bf8fb6d7210293df74)
+
+When this file and a Best Practices page disagree, the Best Practices page wins — this file is project-flavored, the hub is current.
+
+---
+
 ## Active Projects
 
-The two projects we're actively building in `personal-projects/`:
+The active projects in `personal-projects/`:
 
-> **Note:** This list is point-in-time. Before assuming a project is or isn't active, run `ls personal-projects/` and check `git log -1` / `git status` per repo. `bussines-by-bega/` is also active — it's the reference project for App Router patterns, animations, design tokens, testing, and custom UI.
+> **Note:** This list is point-in-time. Before assuming a project is or isn't active, run `ls personal-projects/` and check `git log -1` / `git status` per repo. The canonical live list is the [📋 Project Tracker](https://www.notion.so/a79302bbdf2d471883d1464bc7ae05a7) Notion board.
 
-### `personal-website/` — Next.js Portfolio (Pages Router)
+### `bussines-by-bega/` — Bega's Business Website (App Router)
 
-- **Stack:** Next.js 14, React 18, TypeScript 5, Tailwind 3.4, `@svgr/webpack` for SVG-as-components.
-- **Architecture:** Pages Router (`pages/`), single-page layout. App shell in `_app.tsx`: `ScreenWrapper` → `LoaderOverlayProvider` → `Navbar` → Page → `Footer`.
-- **Styling:** Tailwind utilities + animated gradient background (CSS `@keyframes` in `style/styles.css`). Custom palette: `text #190019`, `primary #dfb6b2`, `secondary #2b124c`, `accent #522b5b`, `backgroundDark #854f6c`, `backgroundLight #fbe4d8`. Custom `hoverPop` keyframe animation.
-- **State:** Single React Context (`LoaderOverlay`) — fullscreen loader triggered before route transitions (600ms intentional delay).
-- **Viewport:** Full-viewport locked layout (`100dvh × 100dvw`, `overflow: hidden`). No page scrolling by design.
+- **Stack:** Next.js 16 (App Router), React 19.2, TypeScript 6, Tailwind. Notion-backed CMS via repository pattern.
+- **Architecture:** Route groups under `app/(site)/`, full SEO stack (robots, sitemap, JSON-LD, `generateMetadata`), `unstable_cache` with centralized cache keys, `"server-only"` import guards on `lib/`.
+- **Reference project** for the patterns described later in this file — App Router conventions, custom UI primitives, design tokens, full testing pyramid, custom CSS animation framework.
+- **Dev:** `npm run dev` / `npm run build` / `npm run lint` / `npm run test` / `npm run e2e`.
+
+### `personal-website/` — Next.js Portfolio (App Router)
+
+- **Stack:** Next.js 16, React 19.2, TypeScript 6, Tailwind 3.4, `next-view-transitions`, custom CSS animation lib.
+- **Architecture:** App Router (`app/`). Route groups: `app/(pages)/about|blog|projects` for chrome-wrapped inner pages; `app/page.tsx` is the bare home. Server components by default.
+- **Styling:** Tailwind utilities + design tokens in `app/globals.css` (`@theme` block) — evergreen, dusty-lavender, copper, molten-lava palettes. Custom CSS animation framework in `lib/animations/animations.css` (no GSAP, no Framer Motion). All animations respect `prefers-reduced-motion`.
+- **Viewport:** Full-viewport locked layout. No page scrolling by design.
 - **SVGs:** Import through `public/icons/index.ts` barrel → used as `<Component />`, not `<img>`.
 - **Dev:** `npm run dev` / `npm run build` / `npm run lint`.
+
+### `tattoo-portfolio/` — Tattoo Studio Site (App Router, Notion-as-CMS)
+
+Next.js 16 App Router site driven entirely by 6 Notion databases (Studio, Artists, Tattoos, Availability, Bookings, Testimonials). See `tattoo-portfolio/CLAUDE.md` for stack and conventions.
 
 ### `client-tab-manager/` — Cross-Browser Extension (Manifest V3)
 
@@ -39,22 +59,36 @@ The two projects we're actively building in `personal-projects/`:
 
 ## TypeScript & Language
 
+**TS 6.x baseline** (TS 7.0 — the Go-native compiler — is on the horizon; full language compatibility, materially faster builds). All other rules stay.
+
 - **Strict mode always** — `"strict": true`, `"noUnusedLocals": true`, `"noUnusedParameters": true`, `"noFallthroughCasesInSwitch": true` in every `tsconfig.json`.
 - **Zero `any`** — use `unknown` + type narrowing, discriminated unions, or generics. ESLint warns on `@typescript-eslint/no-explicit-any`.
 - **Path alias** — `@/*` maps to project root (`./src/*` for Vite, `./*` for Next.js). Never use deep relative imports like `../../../`.
 - **Type-only imports** — use `import type { Foo }` for types that don't exist at runtime.
 - **Dedicated `types/` directory** — domain types go in `types/<domain>.ts` (e.g., `types/content.ts`, `types/notion.ts`). Component prop interfaces stay co-located with the component.
 - **Naming** — PascalCase for component files (`HeroSection.tsx`), kebab-case for lib/utility files (`cache-keys.ts`, `site-config.ts`).
+- **`target` ≥ ES2015** — TypeScript 6.0 deprecated `target: "es5"`. ES2015 is the floor; ES2020+ is fine for any modern runtime. `lib: "es2025"` is available if you need the latest standard library types.
+- **ESM modules only.** Compile to ESM. AMD/UMD/SystemJS module emit is formally de-emphasized in TS 6.0 — don't use it.
 
-## Next.js (App Router — Current Standard)
+## Next.js (App Router — Next.js 16+ baseline)
 
-- **App Router** with route groups: `app/(site)/about/page.tsx` for public pages, `app/api/` for API routes.
-- **Server components by default** — add `"use client"` only when the component uses browser APIs, event handlers, or hooks like `useState`/`useEffect`.
+- **App Router only.** Pages Router is legacy for new code.
+- **Turbopack is the default bundler** in 16+ (stable for dev and production). Don't reach for Webpack unless you hit a specific compatibility issue — and document it if you do.
+- **React Compiler is stable and on by default** in Next.js 16+. It auto-inserts `memo` / `useMemo` / `useCallback` where they pay off. **Manual memoization is an anti-pattern in App Router projects** — profile first, the compiler usually has it covered. (See the React Best Practices page for the full nuance.)
+- **Server components by default** — add `"use client"` only when the component uses browser APIs, event handlers, or hooks like `useState`/`useEffect`. Push the directive as deep into the tree as possible — never on a layout.
 - **`"server-only"` import guard** — every module in `lib/` that touches secrets or server APIs must import `"server-only"` at the top.
 - **Data access via repository pattern** — `lib/<service>/repositories/<entity>.ts` functions wrap API/DB calls. Pages call repositories directly in server components.
-- **Caching** — use `unstable_cache` (or Next.js `cache`) with centralized cache key constants in `lib/<service>/cache-keys.ts` and explicit revalidation intervals.
+- **Caching** — use `unstable_cache` (or Next.js `cache`) with centralized cache key constants in `lib/<service>/cache-keys.ts` and explicit revalidation intervals. Be deliberate: the default `fetch()` in Next.js 16 is no-cache.
+- **New React 19.2 APIs available** — Activity, `useEffectEvent`, React Performance Tracks. Reach for them when needed; the existing `useEffect` / `useState` / `useReducer` rules unchanged.
 - **SEO-first** — every project needs `robots.ts`, `sitemap.ts`, `not-found.tsx`, JSON-LD via `lib/seo.ts`, and OG/Twitter meta tags via `generateMetadata`.
 - **Environment-aware URLs** — resolve site URL from `VERCEL_ENV` / `VERCEL_URL` / `VERCEL_BRANCH_URL`. Non-production environments set `robots: { index: false }`.
+
+## React (in App Router projects)
+
+The repo-spanning React rules — server components default, vertical slice via route groups, state colocation, `useReducer` for multi-field state, named exports — live in the [React Best Practices](https://www.notion.so/358bf806d35d81ce87b9d1533bcc426e) page. Two repo-specific reminders worth keeping here:
+
+- **Don't hand-roll memoization in Next.js 16+ projects.** React Compiler is on by default and handles it. Profile in dev with the compiler enabled before reaching for `memo` / `useMemo` / `useCallback`. In Vite-style React apps without the compiler, the old rule still applies: don't pre-memo, profile first.
+- **Server components by default; client components are the exception.** Push `"use client"` as deep into the tree as possible — never on layouts.
 
 ## Component Architecture
 
@@ -137,7 +171,7 @@ The two projects we're actively building in `personal-projects/`:
 ## Backend Patterns (When Building APIs)
 
 - **Express.js** for Node APIs: Router → Service → ORM layer. One router file per resource.
-- **Django REST Framework** for Python APIs: ViewSets + Serializers + Celery for async.
+- **Django REST Framework** for Python APIs (Django 5.2 LTS or 6.0+; **4.2 reached end of support 7 April 2026**): ViewSets + Serializers + Celery for async.
 - **FastAPI + SQLite** for lightweight/local services (Docker Compose).
 - **JWT auth** — custom middleware extracts token from `x-auth-token` header, bcrypt for password hashing.
 - **Prisma** as preferred Node.js ORM (PostgreSQL). Define schema in `prisma/schema.prisma` with explicit relation names.
@@ -145,6 +179,8 @@ The two projects we're actively building in `personal-projects/`:
 ## Project Setup Conventions
 
 - **ESLint flat config** (`eslint.config.mjs`) with `typescript-eslint`. `no-unused-vars` as warning with `^_` ignore pattern.
+- **pnpm 11** (RC as of May 2026) is the default JS/TS package manager — adds SQLite-backed store, supply-chain protections on by default, `pnpm ci` for CI installs, `pnpm sbom` for supply-chain audits, and short aliases `pn` / `pnx`. Requires Node 22+.
+- **Bun for scripts and CLIs.** Anything you'd run with `tsx` / `ts-node`, run with `bun script.ts` instead. Native TypeScript, zero config, faster. Use Bun for `personal-projects/scripts/` utilities and one-shot tools. Don't replace pnpm or Node-in-production with Bun (yet) — see the [Tooling Best Practices](https://www.notion.so/358bf806d35d81bf8fb6d7210293df74) page for the split.
 - **Vercel deployment** — `vercel.json` for config, `@vercel/analytics` + `@vercel/speed-insights` in root layout, `@vercel/blob` for image storage.
 - **Docker Compose** for multi-service local dev. `.env.example` as template committed to repo.
 - **`@svgr/webpack`** for SVG-as-component imports in Next.js projects.
