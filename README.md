@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/thinair-studios/profile-koi/main/koi/koi-pond.gif" width="256" alt="A pixel-art koi in a pond, drawn every night from my GitHub activity with git-koi" />
+  <img src="https://raw.githubusercontent.com/thinair-studios/profile-koi/main/koi/koi.gif" width="256" alt="A pixel-art koi drawn every night from my GitHub activity with git-koi" />
 </p>
 
 ---
