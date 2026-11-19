@@ -14,6 +14,11 @@
   <a href="https://github.com/RijadRajkic"><img src="https://img.shields.io/badge/GitHub-RijadRajkic-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thinair-studios/profile-koi/main/koi/koi.gif" width="256" alt="A pixel-art koi drawn from my GitHub activity" /><br/>
+  <sub>My koi, redrawn every night from my GitHub activity by <a href="https://github.com/yalongwastaken/git-koi">git-koi</a></sub>
+</p>
+
 ---
 
 ## What I've Built
